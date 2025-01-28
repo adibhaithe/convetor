@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PowerPoint to PDF - Convert PPTX to PDF Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="i-love">I</span>
+                <span class="heart">❤</span>
+                <span class="pdf">PDF</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav class="main-nav">
+                <a href="merge.html" class="nav-item">MERGE PDF</a>
+                <a href="split.html" class="nav-item">SPLIT PDF</a>
+                <a href="compress.html" class="nav-item">COMPRESS PDF</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-item dropdown-toggle">CONVERT PDF ▼</a>
+                    <div class="dropdown-menu">
+                        <a href="jpg-to-pdf.html" class="dropdown-item">JPG to PDF</a>
+                        <a href="pdf-to-jpg.html" class="dropdown-item">PDF to JPG</a>
+                        <a href="word-to-pdf.html" class="dropdown-item">Word to PDF</a>
+                        <a href="pdf-to-word.html" class="dropdown-item">PDF to Word</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="nav-item dropdown-toggle">ALL PDF TOOLS ▼</a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-group">
+                            <h4>Convert from PDF</h4>
+                            <a href="pdf-to-jpg.html" class="dropdown-item">PDF to JPG</a>
+                            <a href="pdf-to-word.html" class="dropdown-item">PDF to Word</a>
+                            <a href="pdf-to-powerpoint.html" class="dropdown-item">PDF to PowerPoint</a>
+                        </div>
+                        <div class="dropdown-group">
+                            <h4>Convert to PDF</h4>
+                            <a href="jpg-to-pdf.html" class="dropdown-item">JPG to PDF</a>
+                            <a href="word-to-pdf.html" class="dropdown-item">Word to PDF</a>
+                            <a href="powerpoint-to-pdf.html" class="dropdown-item active">PowerPoint to PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign up</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="converter-container">
+            <h1>PowerPoint to PDF</h1>
+            <p class="subtitle">Convert PowerPoint presentations (PPTX, PPT) to PDF format.</p>
+
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <button class="select-button">Select PowerPoint File</button>
+                    <input type="file" id="pptInput" accept=".pptx,.ppt" hidden>
+                    <p class="drop-text">or drop PowerPoint file here</p>
+                </div>
+            </div>
+
+            <div class="conversion-options" id="conversionOptions" style="display: none;">
+                <div class="document-preview" id="documentPreview">
+                    <!-- Document preview will be shown here -->
+                </div>
+
+                <div class="options-panel">
+                    <div class="options-grid">
+                        <div class="option-group">
+                            <h3>PDF Quality</h3>
+                            <select id="pdfQuality">
+                                <option value="high">High Quality</option>
+                                <option value="medium" selected>Standard Quality</option>
+                                <option value="low">Low Quality (Smaller File)</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <h3>Include</h3>
+                            <div class="checkbox-group">
+                                <label>
+                                    <input type="checkbox" id="includeNotes" checked>
+                                    Speaker Notes
+                                </label>
+                                <label>
+                                    <input type="checkbox" id="includeComments">
+                                    Comments
+                                </label>
+                                <label>
+                                    <input type="checkbox" id="includeHiddenSlides">
+                                    Hidden Slides
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="convert-button" id="convertBtn">Convert to PDF</button>
+                </div>
+            </div>
+
+            <div class="conversion-status" id="conversionStatus"></div>
+            <div class="download-section" id="downloadSection" style="display: none;">
+                <div class="conversion-result" id="conversionResult">
+                    <!-- Conversion results will be shown here -->
+                </div>
+                <button class="download-button" id="downloadBtn">
+                    <span class="download-icon">⬇️</span> Download PDF
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>© iLovePDF 2024 ® - Your PDF Editor</p>
+    </footer>
+
+    <script src="powerpoint-to-pdf.js"></script>
+</body>
+</html> 

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPG to PDF - Convert Images to PDF Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="i-love">I</span>
+                <span class="heart">❤</span>
+                <span class="pdf">PDF</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav class="main-nav">
+                <a href="merge.html" class="nav-item">MERGE PDF</a>
+                <a href="split.html" class="nav-item">SPLIT PDF</a>
+                <a href="compress.html" class="nav-item">COMPRESS PDF</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-item dropdown-toggle">CONVERT PDF ▼</a>
+                    <div class="dropdown-menu">
+                        <a href="jpg-to-pdf.html" class="dropdown-item active">JPG to PDF</a>
+                        <a href="pdf-to-jpg.html" class="dropdown-item">PDF to JPG</a>
+                        <a href="word-to-pdf.html" class="dropdown-item">Word to PDF</a>
+                        <a href="pdf-to-word.html" class="dropdown-item">PDF to Word</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="nav-item dropdown-toggle">ALL PDF TOOLS ▼</a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-group">
+                            <h4>Convert from PDF</h4>
+                            <a href="pdf-to-jpg.html" class="dropdown-item">PDF to JPG</a>
+                            <a href="pdf-to-word.html" class="dropdown-item">PDF to Word</a>
+                            <a href="pdf-to-powerpoint.html" class="dropdown-item">PDF to PowerPoint</a>
+                        </div>
+                        <div class="dropdown-group">
+                            <h4>Convert to PDF</h4>
+                            <a href="jpg-to-pdf.html" class="dropdown-item active">JPG to PDF</a>
+                            <a href="word-to-pdf.html" class="dropdown-item">Word to PDF</a>
+                            <a href="powerpoint-to-pdf.html" class="dropdown-item">PowerPoint to PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign up</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="converter-container">
+            <h1>JPG to PDF</h1>
+            <p class="subtitle">Convert JPG, PNG, or other image files to PDF format.</p>
+
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <button class="select-button">Select Images</button>
+                    <input type="file" id="imageInput" accept="image/*" multiple hidden>
+                    <p class="drop-text">or drop image files here</p>
+                </div>
+            </div>
+
+            <div class="conversion-options" id="conversionOptions" style="display: none;">
+                <div class="images-list" id="imagesList">
+                    <div class="images-header">
+                        <span>Selected Images</span>
+                        <button class="add-more-btn" id="addMoreBtn">+ Add more images</button>
+                    </div>
+                    <div class="images-grid" id="imagesGrid">
+                        <!-- Images will be listed here -->
+                    </div>
+                </div>
+
+                <div class="options-panel">
+                    <div class="options-grid">
+                        <div class="option-group">
+                            <h3>Page Size</h3>
+                            <select id="pageSize">
+                                <option value="a4" selected>A4 (210 × 297 mm)</option>
+                                <option value="letter">US Letter (215.9 × 279.4 mm)</option>
+                                <option value="fit">Fit to Image</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <h3>Page Orientation</h3>
+                            <select id="orientation">
+                                <option value="auto" selected>Auto Detect</option>
+                                <option value="portrait">Portrait</option>
+                                <option value="landscape">Landscape</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <h3>Image Quality</h3>
+                            <select id="quality">
+                                <option value="high">High</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="low">Low</option>
+                            </select>
+                        </div>
+
+                        <div class="option-group">
+                            <h3>Margins</h3>
+                            <select id="margins">
+                                <option value="none">No Margins</option>
+                                <option value="small" selected>Small (10mm)</option>
+                                <option value="normal">Normal (25mm)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="convert-button" id="convertBtn">Convert to PDF</button>
+                </div>
+            </div>
+
+            <div class="conversion-status" id="conversionStatus"></div>
+            <div class="download-section" id="downloadSection" style="display: none;">
+                <button class="download-button" id="downloadBtn">
+                    <span class="download-icon">⬇️</span> Download PDF
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>© iLovePDF 2024 ® - Your PDF Editor</p>
+    </footer>
+
+    <script src="jpg-to-pdf.js"></script>
+</body>
+</html> 

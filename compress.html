@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compress PDF - Reduce PDF File Size Online</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="i-love">I</span>
+                <span class="heart">❤</span>
+                <span class="pdf">PDF</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav class="main-nav">
+                <a href="merge.html" class="nav-item">MERGE PDF</a>
+                <a href="split.html" class="nav-item">SPLIT PDF</a>
+                <a href="compress.html" class="nav-item active">COMPRESS PDF</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-item dropdown-toggle">CONVERT PDF ▼</a>
+                    <div class="dropdown-menu">
+                        <a href="jpg-to-pdf.html" class="dropdown-item">JPG to PDF</a>
+                        <a href="pdf-to-jpg.html" class="dropdown-item">PDF to JPG</a>
+                        <a href="word-to-pdf.html" class="dropdown-item">Word to PDF</a>
+                        <a href="pdf-to-word.html" class="dropdown-item">PDF to Word</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a href="#" class="nav-item dropdown-toggle">ALL PDF TOOLS ▼</a>
+                    <div class="dropdown-menu">
+                        <!-- Same dropdown content as other pages -->
+                    </div>
+                </div>
+            </nav>
+            <div class="auth-buttons">
+                <button class="login-btn">Login</button>
+                <button class="signup-btn">Sign up</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="converter-container">
+            <h1>Compress PDF File</h1>
+            <p class="subtitle">Reduce PDF file size while optimizing for the best quality.</p>
+
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <button class="select-button">Select PDF file</button>
+                    <input type="file" id="pdfInput" accept=".pdf" hidden>
+                    <p class="drop-text">or drop PDF file here</p>
+                </div>
+            </div>
+
+            <div class="compression-options" id="compressionOptions" style="display: none;">
+                <div class="pdf-info" id="pdfInfo">
+                    <!-- File info will be shown here -->
+                </div>
+
+                <div class="compression-levels">
+                    <h3>Compression Level</h3>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="compressionLevel" value="recommended" checked>
+                            <div class="level-info">
+                                <span class="level-name">Recommended compression</span>
+                                <span class="level-desc">Best balance of size and quality</span>
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="compressionLevel" value="high">
+                            <div class="level-info">
+                                <span class="level-name">High compression</span>
+                                <span class="level-desc">Smaller file size, lower quality</span>
+                            </div>
+                        </label>
+                        <label>
+                            <input type="radio" name="compressionLevel" value="low">
+                            <div class="level-info">
+                                <span class="level-name">Low compression</span>
+                                <span class="level-desc">Better quality, larger file size</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <button class="compress-button" id="compressBtn">Compress PDF</button>
+            </div>
+
+            <div class="conversion-status" id="conversionStatus"></div>
+            <div class="download-section" id="downloadSection" style="display: none;">
+                <div class="compression-result" id="compressionResult">
+                    <!-- Compression results will be shown here -->
+                </div>
+                <button class="download-button" id="downloadBtn">
+                    <span class="download-icon">⬇️</span> Download Compressed PDF
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>© iLovePDF 2024 ® - Your PDF Editor</p>
+    </footer>
+
+    <script src="compress.js"></script>
+</body>
+</html> 
